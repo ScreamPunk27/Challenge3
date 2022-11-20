@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+:root{
+    --Primary:hsl(179, 62%, 43%);
+    --Yellow:hsl(71, 73%, 54%);
+    --Gray:hsl(204, 43%, 93%);
+    --Blue:hsl(218, 22%, 67%);
+}
+
+body{
+    background: var(--Gray);
+    font-family: 'Karla', sans-serif;
+}
+
+#container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page{
+    display: grid;
+    grid-gap:0;
+    text-align: left;
+    
+}
+
+#first,#second,#third{
+    padding: 2em;
+}
+
+#first{
+    background: #fff;
+}
+
+#first-title{
+    color: var(--Primary);
+    font-weight: 700;
+}
+
+#first-sub{
+    color:var(--Yellow);
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#first-p{
+    color: var(--Blue);
+    font-weight: 400;
+}
+
+#second{
+    background: var(--Primary);
+}
+
+#second-sub{
+    margin-bottom: 0.3em;
+}
+
+
+button{
+    width: 100%;
+    padding: .8em 0;
+    background: var(--Yellow);
+    color:#fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2em;
+}
+
+#third{
+    background:#5DADE2;
+}
+
+li{
+    color: var(--Gray);
+}
+
+
+.titles{
+    margin-bottom: 1em;
+}
+
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin-bottom: 0.3em;
+}
+
+#second,#third{
+    color: #fff;
+}
+
+.separador{
+    display: flex;
+    align-items: center;
+    margin-bottom: .8em;
+}
+
+.separador p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: .5em;
+}
+
+.separador p:nth-last-child(){
+    color: var(--Gray);
+}
+
+@media screen and (min-width:800px){
+
+    #container{
+        height: 100vh;
+    }
+
+    #page{
+        grid-template-areas: "header header"
+                              "foot1 foot2";
+    }    
+
+    #first{
+        grid-area: header;
+    }
+    #second{
+        grid-area: foot1;
+    }
+    #third{
+        grid-area: foot2;
+    }
+}
